@@ -1,3 +1,4 @@
+/*  Base du site */
 * {
   margin: 0;
   padding: 0;
@@ -12,15 +13,46 @@ body {
   color: white;
 }
 
+/* header et boutons */
 header {
   background-color: black;
   padding: 20px;
+}
+.light-mode header {
+  background-color: white;
 }
 
 a {
   text-decoration: none;
   font-size: 20px;
   color: white;
+}
+button {
+  font-family: "Momo Trust Display", sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-color: white;
+}
+
+.light-mode button {
+  font-family: "Momo Trust Display", sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.light-mode a {
+  color: black;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
 }
 
 .nav-list {
@@ -42,6 +74,7 @@ a {
   color: #f8c169;
 }
 
+/* Titres et fond vidéo */
 h1 {
   font-size: 80px;
   color: white;
@@ -101,6 +134,8 @@ h3 {
   color: #f8c169;
   transform: scale(1.1);
 }
+
+/* Section Introduction  */
 .introduction-contenu-flex {
   display: flex;
   margin-top: 20px;
@@ -155,6 +190,11 @@ hr {
   background-color: white;
 }
 
+.light-mode hr {
+  background-color: black;
+}
+
+/* Liste des jeux  */
 .Jeux_Disponible {
   text-align: center;
   font-size: 40px;
@@ -244,6 +284,7 @@ hr {
   padding: 28px;
 }
 
+/*  Section Personnages  */
 .personnages-principaux {
   text-align: center;
 }
@@ -291,6 +332,7 @@ hr {
   transform: scale(1.1);
 }
 
+/* Bas de page (Footer)  */
 footer {
   height: 100px;
   margin: 20px;
@@ -298,4 +340,69 @@ footer {
   align-items: center;
   text-align: center;
   font-size: 20px;
+}
+
+/*  Menu sur burger*/
+.sidebar {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: black;
+  padding: 20px;
+  transition: left 0.3s ease;
+}
+
+.sidebar-open .sidebar {
+  left: 0;
+}
+
+.light-mode .sidebar {
+  background-color: white;
+}
+
+.side-nav-list {
+  list-style: none;
+}
+
+.side-nav-item {
+  margin-bottom: 20px;
+}
+
+.side-nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.side-nav-item a:hover {
+  color: #f8c169;
+}
+
+.light-mode .side-nav-item a:hover {
+  color: #f8c169;
+}
+
+.light-mode .side-nav-item a {
+  color: black;
+}
+
+main {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-open main {
+  margin-left: 220px;
+}
+
+#burger-menu {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.light-mode #burger-menu {
+  color: black;
 }
